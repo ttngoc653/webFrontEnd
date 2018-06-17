@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ngoc Anh</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="js/bootstrap.min.js"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/jquery.fileupload.css"> 
+</head>
+<body style="background-color: #0079BF">
+	<div class="header">
+		<div class="logo">
+			<img src="img/logo.PNG" />
+		</div>
+		<div class="search">
+			<div class="img">
+				<img src="img/m.PNG"/>
+			</div>
+		</div>
+		<div class="right">
+			<a data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus" aria-hidden="true"></i></a>
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle" style="color: #666">Táº¡o má»›i</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body" style="color: #666">
+			        <h5>Táº¡o Báº£ng...</h5>
+			        <p>Má»™t báº£ng táº¡o thÃ nh tá»« cÃ¡c tháº» Ä‘Æ°á»£c sáº¯p xáº¿p trong danh sÃ¡ch. Sá»­ dá»¥ng báº£ng Ä‘á»ƒ quáº£n lÃ­ cÃ¡c dá»± Ã¡n,theo dÃµi 
+			        thÃ´n tin hoáº·c tá»• chá»©c báº¥t cá»© viá»‡c gÃ¬</p>
+			        <h5>Táº¡o NhÃ³m</h5>
+			        <p>Má»™t nhÃ³m lÃ  táº­p há»£p cÃ¡c báº£ng vÃ  má»�i ngÆ°á»�i .Sá»­ dá»¥ng nhÃ³m Ä‘á»ƒ tá»• chá»©c cÃ´ng ty cá»§a báº¡n,há»• trá»£ ngÆ°á»�i báº­n rá»™n,gia Ä‘Ã¬nh ,báº¡n bÃ¨</p>
+			        <h5>Táº¡o nhÃ³m Bussiness</h5>
+			        <p>Vá»›i nhÃ³m Bussiness Class nhÃ³m cá»§a báº¡n cÃ³ nhiá»�u kiá»ƒm soÃ¡t an ninh,hÃ nh chÃ­nh hÆ¡n vÃ  Power up khÃ´ng giá»›i háº¡n</p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+
+			<!-- <a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a> -->
+			<a data-toggle="modal" data-target="#exampleModal1"><i class="fa fa-bell" aria-hidden="true"></i></a>
+			<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle" style="color: #666">ThÃ´ng bÃ¡o</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <h5 class="modal-title" id="exampleModalLongTitle"><a href="#" style="color:#666">Xem táº¥t cáº£</a></h5>
+			      <div class="modal-body" style="color: #666">
+			        <img src="img/taco-sleep.0582d9f3bdb5060e7285.svg" style="text-align: center;" />
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="header1">
+		<ul>
+			<li>Báº£ng khÃ´ng cÃ³ tiÃªu Ä‘á»� &nbsp<i class="fa fa-star-o" aria-hidden="true"></i></li>
+			<li>CÃ¡ nhÃ¢n</li>
+			<li><i class="fa fa-lock" aria-hidden="true"></i> &nbsp RiÃªng tÆ°</li>
+			<li><i class="fa fa-user-plus" aria-hidden="true"></i></li>
+		</ul>
+	</div>
+	<div class="body">
+		<div class="section" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div class="form-group">
+			<p class="suaten">cáº§n lÃ m</p><span class="remove_table">X</span>
+			<i id ="edit1" class="fa fa-pencil" aria-hidden="true"></i>
+			<div class="shownhan"></div>
+			<textarea class="form-control" placeholder="chinh sua ten" style="display: none;"></textarea>
+			<button class="c-close1" style="display: none;">luu1</button>
+			</div>
+			<div draggable="true" ondragstart="drag(event)" id ="drap" class="primary" data-toggle="modal" data-target="#exampleModalCenter">ngoc anh <span class="remove">xoa</span></div>
+			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<label>Ngoc anh</label>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<!-- <p>trong danh sÃ¡ch</p> -->
+							<div class="title_nhan">Nhan</div>
+							<div class="shownhan"></div>
+							<div class="title_name">Thanh vien</div>
+							<div class="showname"></div>
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">MÃ´ táº£</label> 
+								<span class="edit">chá»‰nh sá»­a</span>
+								<p class="mota"></p>
+								<textarea class="form-control" placeholder="them mo ta chi tiet"></textarea>
+								<button class="luu">lÆ°u</button>
+							</div>
+							<!-- ///////////////upload///////////// -->
+							<input type="file" multiple class="gallery-photo-add">
+							<div class="gallery"></div>
+							<div class="gallery"></div>
+							<div class="gallery"></div>
+							<div></div>
+
+					<!-- ////////////////////////////////////////////// -->
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">thÃªm bÃ¬nh luáº­n</label>
+								<textarea class="form-control" placeholder="viet binh luan"></textarea>
+								<button class="save">lÆ°u</button>
+							</div>
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">Hoáº¡t Ä‘á»™ng</label>
+								<p class="hoatdong"></p>
+							</div>
+						</div>
+						<div class="thanhvien">
+							<label for="message-text" class="col-form-label">Them</label>
+							<button class="thanhvien1">ThÃ nh viÃªn</button>
+							<button class="nhan">Nhan</button>
+							<div class="color">
+								<h5>Nhan</h5><span class="remove_table1">X</span>
+								<button class="green"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="yellow"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="orange"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="red"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="violet"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="blue"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="pink"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+							</div>
+							<div class="member">
+								<h5>Thanh vien</h5><span class="remove_table2">X</span>
+								<input type="text" class="search" placeholder="Type to search">
+								<table class="table">
+								   <tr class="name1">
+								      <td>Adele</td>
+								   </tr>
+								   <tr class="name2">
+								      <td>Billy</td>
+								   </tr>
+								   <tr class="name3">
+								      <td>Candy</td>
+								   </tr>
+								   <tr class="name4">
+								   		<td>Agnes</td>
+								   </tr>
+								   <tr class="name5">
+								   		<td>Bob</td>
+								   </tr>
+								</table>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>			
+			<div class="new">
+				<textarea class="text" name="text"></textarea>
+				<button  class="add">thÃªm</button>
+				<button class="c-close">X</button>
+			</div>
+			<button class="add_modal">ThÃªm tháº» ...</button>
+		</div>
+		<div class="section" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div class="form-group">
+			<p class="suaten">Ä‘ang lÃ m</p><span class="remove_table">X</span>
+			<i id ="edit1" class="fa fa-pencil" aria-hidden="true"></i>
+			<div class="shownhan"></div>
+			<textarea class="form-control" placeholder="chinh sua ten" style="display: none;"></textarea>
+			<button class="c-close1" style="display: none;">luu1</button>
+			</div>
+
+			<div draggable="true" ondragstart="drag(event)" id ="drap1" class="primary" data-toggle="modal" data-target="#exampleModalCenter1">Ä‘ang lÃ m <span class="remove">xoa</span></div>
+			<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">dang lÃ m</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="title_nhan">Nhan</div>
+							<div class="shownhan"></div>
+							<div class="title_name">Thanh vien</div>
+							<div class="showname"></div>
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">MÃ´ táº£</label> 
+								<span class="edit">chá»‰nh sá»­a</span>
+								<p class="mota"></p>
+								<textarea class="form-control" placeholder="them mo ta chi tiet"></textarea>
+								<button class="luu">lÆ°u</button>
+							</div>
+							<input type="file" multiple class="gallery-photo-add">
+								<div class="gallery"></div>
+								<div class="gallery"></div>
+								</div><div>
+
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">them binh luan</label>
+								<textarea class="form-control" placeholder="viet binh luan"></textarea>
+								<button class="save">lÆ°u</button>
+							</div>
+							<!-- /////upload/// -->
+								
+
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">Hoáº¡t Ä‘á»™ng</label>
+								<p class="hoatdong"></p>
+							</div>
+							<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+						</div>
+						<div class="thanhvien">
+							<h5>Them</h5>
+							<button class="thanhvien1">ThÃ nh viÃªn</button>
+							<button class="nhan">Nhan</button>
+							<div class="color">
+								<h5>Nhan</h5><span class="remove_table1">X</span>
+								<button class="green"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="yellow"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="orange"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="red"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="violet"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="blue"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="pink"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+							</div>
+							<div class="member">
+								<h5>Thanh vien</h5><span class="remove_table2">X</span>
+								<input type="text" class="search" placeholder="Type to search">
+
+								<table class="table">
+								   <tr>
+								      <td class="name1">Adele</td>
+								   </tr>
+								   <tr>
+								      <td class="name2">Billy</td>
+								   </tr>
+								   <tr>
+								      <td class="name3" class="name3">Candy</td>
+								   </tr>
+								   <tr>
+								   		<td class="name4">Agnes</td>
+								   </tr>
+								   <tr>
+								   		<td class="name5">Bob</td>
+								   </tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="new">
+				<textarea class="text"></textarea>
+				<button  class="add">thÃªm</button>
+				<button class="c-close">X</button>
+			</div>
+			<button class="add_modal">ThÃªm tháº» ...</button>
+		</div>
+		<div class="section" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div class="form-group">
+			<p class="suaten">Ä‘Ã£ lÃ m</p><span class="remove_table">X</span>
+			<i id ="edit1" class="fa fa-pencil" aria-hidden="true"></i>
+			<div class="shownhan"></div>
+			<textarea class="form-control" placeholder="chinh sua ten" style="display: none;"></textarea>
+			<button class="c-close1" style="display: none;">luu1</button>
+			</div>
+			<div draggable="true" ondragstart="drag(event)" id ="drap2" class="primary" data-toggle="modal" data-target="#exampleModalCenter2">Ä‘Ã£ lÃ m <span class="remove">xoa</span></div>
+			<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">da lÃ m</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="title_nhan">Nhan</div>
+							<div class="shownhan"></div>
+							<div class="title_name">Thanh vien</div>
+							<div class="showname"></div>
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">MÃ´ táº£</label> 
+								<span class="edit">chá»‰nh sá»­a</span>
+								<p class="mota"></p>
+								<textarea class="form-control" placeholder="them mo ta chi tiet"></textarea>
+								<button class="luu">lÆ°u</button>
+							</div>
+							<input type="file" multiple class="gallery-photo-add">
+								<div class="gallery"></div>
+								<div class="gallery"></div>
+								</div><div>
+
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">thÃªm bÃ¬nh luÃ¢n</label>
+								<textarea class="form-control" placeholder="viet binh luan"></textarea>
+								<button class="save">lÆ°u</button>
+							</div>
+
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">Hoáº¡t Ä‘á»™ng</label>
+								<p class="hoatdong"></p>
+							</div>
+							<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+						</div>
+						<div class="thanhvien">
+							<h5>Them</h5>
+							<button class="thanhvien1">ThÃ nh viÃªn</button>
+							<button class="nhan">Nhan</button>
+							<div class="color">
+								<h5>Nhan</h5><span class="remove_table1">X</span>
+								<button class="green"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="yellow"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="orange"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="red"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="violet"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="blue"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+								<button class="pink"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+							</div>
+							<div class="member">
+								<h5>Thanh vien</h5><span class="remove_table2">X</span>
+								<input type="text" class="search" placeholder="Type to search">
+
+								<table class="table">
+								   <tr class="name1">
+								      <td>Adele</td>
+								   </tr>
+								   <tr class="name2">
+								      <td>Billy</td>
+								   </tr>
+								   <tr class="name3">
+								      <td>Candy</td>
+								   </tr>
+								   <tr class="name4">
+								   		<td>Agnes</td>
+								   </tr>
+								   <tr class="name5">
+								   		<td>Bob</td>
+								   </tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="new">
+				<textarea class="text"></textarea>
+				<button  class="add">thÃªm</button>
+				<button class="c-close">X</button>
+			</div>
+			<button class="add_modal">ThÃªm tháº» ...</button>
+		</div>
+	</div>
+	<div class="adds">
+		<textarea class="texts"></textarea>
+		<button  class="addss">thÃªm</button>
+		<button class="c-closes">X</button>
+	</div>
+	<div class="them_section">ThÃªm danh sÃ¡ch</div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	// var imagesPreview = function(input, placeToInsertImagePreview) {
+
+	// 	    if (input.files) {
+	// 	        var filesAmount = input.files.length;
+
+	// 	        for (i = 0; i < filesAmount; i++) {
+	// 	            var reader = new FileReader();
+
+	// 	            reader.onload = function(event) {
+	// 	                $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+	// 	            }
+
+	// 	            reader.readAsDataURL(input.files[i]);
+	// 	        }
+	// 	    }
+
+	// 	};
+
+	// 	$('.gallery-photo-add').on('change', function() {
+	// 		var n = $(this);
+	// 	    imagesPreview(this, n.next());
+	// 	});
+
+	// });
+	
+	if (typeof(Storage) !== "undefined") { //////////
+		//alert(localStorage.getItem("body")); //////////
+		document.body.innerHTML=localStorage.getItem("body"); //////////
+	} //////////
+
+ $(function() {
+    // Multiple images preview in browser
+    var imagesPreview = function(input, placeToInsertImagePreview) {
+
+        if (input.files) {
+            var filesAmount = input.files.length;
+
+            for (i = 0; i < filesAmount; i++) {
+                var reader = new FileReader();
+
+                reader.onload = function(event) {
+                    $($.parseHTML('<img style="width:100px">')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+                }
+
+                reader.readAsDataURL(input.files[i]);
+            }
+        }
+
+    };
+
+    $('.gallery-photo-add').on('change', function() {
+    	var n = $(this);
+        imagesPreview(this, n.next());
+    });
+});
+
+
+
+
+///////search////////
+
+	var $rows = $('.table tr');
+	$('.search').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+    
+    $rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+
+	//////////////////////////////////
+	var i = 3;
+	$(document).ready(function(){
+
+		
+		$("body").on("click", ".add_modal", function(){
+			var $this = $(this);
+			$($this).prev().show();
+			$($this).hide();
+			$(".text").val("");
+			i++;
+			localStorage.setItem("body",document.body.innerHTML); //////////
+		})
+		$("body").on("click", ".c-close", function(){
+			var $this = $(this);
+			$this.parent().hide();
+			$this.parent().next().show();
+		})
+		$("body").on("click", ".add", function(){
+			var $this = $(this);
+			var n = $this.prev().val();	
+
+			$this.parent().before("<div draggable='true' ondragstart='drag(event)' id='drag "+i+"' class='primary' data-toggle='modal' data-target='#exampleModalCenter"+i+"'>"+n+" <span class='remove'>xoa</span></div>	<div class='modal fade' id='exampleModalCenter"+i+"' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>	<div class='modal-dialog modal-dialog-centered' role='document'>	<div class='modal-content'>	<div class='modal-header'>	<h5 class='modal-title'></h5>  <button type='button' class='close' data-dismiss='modal' aria-label='Close'>	<span aria-hidden='true'>&times;</span>	</button> </div>	<div class='modal-body'><div class='title_nhan'>Nhan</div> <div class='shownhan'></div> <div class='title_name'>Thanh vien</div> <div class='showname'></div>	<div class='form-group'>	<label for='message-text' class='col-form-label'>Mo ta</label> 	<span class='edit'>chá»‰nh sá»­a</span>	<p class='mota'></p>	<textarea class='form-control' placeholder='them mo ta chi tiet'></textarea>	<button class='luu'>lÆ°u</button>	</div>			<div class='form-group'><label for='message-text' class='col-form-label'>them binh luan</label>	<textarea class='form-control' placeholder='viet binh luan'></textarea>	<button class='save'>lÆ°u</button>	</div>	<div class='form-group'><label for='message-text' class='col-form-label'>Hoáº¡t Ä‘á»™ng</label>	<p class='hoatdong'></p></div></div> <div class='thanhvien'> <h5>Them</h5> <button class='thanhvien1'>Thanh vien</button> <button class='nhan'>Nhan</button> <div class='color'> <h5>Nhan</h5><span class='remove_table1'>X</span><button class='green'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='yellow'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='orange'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='red'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='violet'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='blue'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='pink'><i class='fa fa-pencil' aria-hidden='true'></i></button></div> <div class='member'><h5>Thanh vien</h5><span class='remove_table2'>X</span><input type='text' class='search' placeholder='Type to search'><table class='table'><tr class='name1'><td>Adele</td></tr> <tr class='name2'> <td>Billy</td></tr><tr class='name3'><td>Candy</td></tr> <tr class='name4'><td>Agnes</td> </tr> <tr class='name5'><td>Bob</td></tr></table></div>	 	</div>	</div>	</div>	</div>");
+			
+			$this.parent().hide();
+			$this.parent().next().show();
+			
+			localStorage.setItem("body",document.body.innerHTML); //////////
+		})
+
+
+
+
+
+		$("body").on("click", ".luu", function(){
+			var $this = $(this);
+			var n = $this.prev(".form-control").val();
+			$this.prev().prev(".mota").html(n);
+			$this.prev().prev(".mota").show();
+			$this.hide();
+			$this.prev(".form-control").hide();
+			$this.prev().prev().prev(".edit").show();
+
+			localStorage.setItem("body",document.body.innerHTML); //////////
+		})
+		$("body").on("click", ".edit", function(){
+			var $this = $(this);
+			$this.next(".mota").hide();
+			var n = $this.next(".mota").innerHTML;
+			$this.next().next(".form-control").show();
+			$this.next().next().next(".luu").show();
+			$this.next().next(".form-control").html(n);
+			$this.hide();
+		})
+
+		$("body").on("click", ".save", function(){
+			var $this = $(this);
+			var n = $this.prev(".form-control").val();
+			$this.parent().next().children(".hoatdong").append("<p>"+n+"</p>");
+			$this.prev(".form-control").val("");
+			
+			localStorage.setItem("body",document.body.innerHTML); //////////
+		})
+
+		$("body").on("click",".remove",function(){
+			var $this = $(this);
+			$this.parent().next().remove();
+			$this.parent().remove();
+			
+			localStorage.setItem("body",document.body.innerHTML); //////////
+		})
+		
+
+		// thÃªm danh sÃ¡ch
+		$(".them_section").click(function(){
+			var $this = $(this);
+			$this.prev().show();
+			$this.hide();
+			
+			localStorage.setItem("body",document.body.innerHTML); //////////
+		})
+		$(".addss").click(function(){
+			var $this = $(this);
+			var n = $this.prev(".texts").val();	
+			$(".body").append("<div class='section' ondrop='drop(event)' ondragover='allowDrop(event)'><div class='form-group'><p class='suaten'>"+n+"</p><span class=\"remove_table\">X</span>	<i id=\"edit1\" class='fa fa-pencil' aria-hidden='true'></i> <div class='shownhan'></div> <textarea class='form-control' placeholder='chinh sua ten' style='display:none'></textarea> <button class='c-close1' style='display:none'>luu1</button></div> <div class='new'><textarea class='text'></textarea>	<button  class='add'>thÃªm</button>	<button class='c-close'>X</button></div><button class='add_modal'>ThÃªm tháº» ...</button></div>");
+			$this.parent().hide();
+			$this.parent().next().show();
+			$this.prev(".texts").val("");	
+			
+			localStorage.setItem("body",document.body.innerHTML); //////////
+		})
+
+		$("body").on("click", ".remove_table", function(){
+			var $this = $(this);
+			$this.parent().parent().remove();
+			
+			localStorage.setItem("body",document.body.innerHTML); //////////
+		})
+
+
+		$(".c-closes").click(function(){
+			var $this = $(this);
+			$this.parent().hide();
+			$this.parent().next().show();
+		})
+		$("body").on("click",".c-close1",function(){
+			var $this = $(this);
+			var n = $this.prev(".form-control").val();
+			$this.prev().prev().prev().prev().prev(".suaten").html(n);
+			$this.prev().prev().prev().prev().prev(".suaten").show();
+			$this.hide();
+			$this.prev(".form-control").hide();
+			$this.prev().prev().prev("#edit1").show();
+		
+		})
+		$("body").on("click","#edit1",function(){
+			var $this = $(this);
+			$this.prev().prev(".suaten").hide();
+			var n = $this.prev().prev(".suaten").innerHTML;
+			$this.next().next(".form-control").show();
+			$this.next().next().next(".c-close1").show();
+			$this.next().next(".form-control").html(n);
+			$this.hide();
+
+		})
+
+		/////////////////thanh vien//////////////////////////////
+		$("body").on("click",".thanhvien1",function(){
+			$('.member').show();
+		})
+		$("body").on("click",".remove_table2",function(){
+			$('.member').hide();
+			$('.thanhvien').show();
+		})
+
+		// thÃªm tÃªn thÃ nh viÃªn
+		$("body").on("click",".name1",function(){
+		var $this = $(this);
+		var n = $this.val();
+		$this.parents('.thanhvien').prev().children('.title_name').show();
+		if($this.parents('.thanhvien').prev().children('.showname').children().hasClass('n1')){
+			$this.parents('.thanhvien').prev().children('.showname').children('.n1').remove();
+
+		}
+		else{
+			$this.parents('.thanhvien').prev().children('.showname').append('<span class="n1">Adele</span>');
+		}
+
+		})
+
+		$("body").on("click",".name2",function(){
+			var $this = $(this);
+			var n = $this.val();
+		$this.parents('.thanhvien').prev().children('.title_name').show();
+		if($this.parents('.thanhvien').prev().children('.showname').children().hasClass('n1')){
+			$this.parents('.thanhvien').prev().children('.showname').children('.n1').remove();
+
+		}
+		else{
+			$this.parents('.thanhvien').prev().children('.showname').append('<span class="n1">Billy</span>');
+		}
+
+		})
+
+		$("body").on("click",".name3",function(){
+			var $this = $(this);
+			var n = $this.val();
+		$this.parents('.thanhvien').prev().children('.title_name').show();
+		if($this.parents('.thanhvien').prev().children('.showname').children().hasClass('n1')){
+			$this.parents('.thanhvien').prev().children('.showname').children('.n1').remove();
+		}
+		else{
+			$this.parents('.thanhvien').prev().children('.showname').append('<span class="n1">Candy</span>')
+		}
+
+		})
+
+		$("body").on("click",".name4",function(){
+			var $this = $(this);
+			var n = $this.val();
+		$this.parents('.thanhvien').prev().children('.title_name').show();
+		if($this.parents('.thanhvien').prev().children('.showname').children().hasClass('n1')){
+			$this.parents('.thanhvien').prev().children('.showname').children('.n1').remove();
+		}
+		else{
+			$this.parents('.thanhvien').prev().children('.showname').append('<span class="n1">Agnes</span>')
+		}
+
+		})
+
+		$("body").on("click",".name5",function(){
+			var $this = $(this);
+			var n = $this.val();
+		$this.parents('.thanhvien').prev().children('.title_name').show();
+		if($this.parents('.thanhvien').prev().children('.showname').children().hasClass('.n1')){
+			$this.parents('.thanhvien').prev().children('.showname').children('.n1').remove();
+		}
+		else{
+			$this.parents('.thanhvien').prev().children('.showname').append('<span class="n1">Bob</span>')
+		}
+
+		})
+
+
+
+		// mau
+		$("body").on("click",".nhan",function(){
+			$('.color').show();
+		})
+		$("body").on("click",".remove_table1",function(){
+			$('.color').hide();
+			$('.thanhvien').show();
+		})
+		// them mau
+		$("body").on("click",".green",function(){
+			var $this = $(this);
+			// náº¿u tá»“n táº¡i báº¥t ká»³ 1 mÃ u nÃ o thÃ¬ <div class="title_nhan">Nhan</div> sáº½ áº©n vÃ  ngÆ°á»£c láº¡i
+			if($this.parents('.thanhvien').prev().children('.shownhan').has('span')){
+				$this.parents('.thanhvien').prev().children('.title_nhan').show();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.title_nhan').hide();
+				$this.html("ngu");
+			}
+
+			// kiá»ƒm tra náº¿u tá»“n táº¡i mÃ u green thÃ¬ xÃ³a. chÆ°a thÃ¬ thÃªm vÃ o
+			if($this.parents('.thanhvien').prev().children('.shownhan').children().hasClass('green')){
+				$this.parents('.thanhvien').prev().children('.shownhan').children('.green').remove();
+				$this.parents('.modal').prev().prev().children('.shownhan').children('.green').remove();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.shownhan').append('<span class="green"></span>');
+				$this.parents('.modal').prev().prev().children('.shownhan').append('<span class="green"></span>');
+			}
+		})
+		$("body").on("click",".yellow",function(){
+			var $this = $(this);
+			if($this.parents('.thanhvien').prev().children('.shownhan').has('span')){
+				$this.parents('.thanhvien').prev().children('.title_nhan').show();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.title_nhan').hide();
+			}
+			if($this.parents('.thanhvien').prev().children('.shownhan').children().hasClass('yellow')){
+				$this.parents('.thanhvien').prev().children('.shownhan').children('.yellow').remove();
+				$this.parents('.modal').prev().prev().children('.shownhan').children('.yellow').remove();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.shownhan').append('<span class="yellow"></span>');
+				$this.parents('.modal').prev().prev().children('.shownhan').append('<span class="yellow"></span>');
+			}
+		})
+		$("body").on("click",".orange",function(){
+			var $this = $(this);
+			if($this.parents('.thanhvien').prev().children('.shownhan').has('span')){
+				$this.parents('.thanhvien').prev().children('.title_nhan').show();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.title_nhan').hide();
+			}
+			if($this.parents('.thanhvien').prev().children('.shownhan').children().hasClass('orange')){
+				$this.parents('.thanhvien').prev().children('.shownhan').children('.orange').remove();
+				$this.parents('.modal').prev().prev().children('.shownhan').children('.orange').remove();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.shownhan').append('<span class="orange"></span>');
+				$this.parents('.modal').prev().prev().children('.shownhan').append('<span class="orange"></span>');
+			}
+
+		})
+		$("body").on("click",".red",function(){
+			var $this = $(this);
+			if($this.parents('.thanhvien').prev().children('.shownhan').has('span')){
+				$this.parents('.thanhvien').prev().children('.title_nhan').show();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.title_nhan').hide();
+			}
+			if($this.parents('.thanhvien').prev().children('.shownhan').children().hasClass('red')){
+				$this.parents('.thanhvien').prev().children('.shownhan').children('.red').remove();
+				$this.parents('.modal').prev().prev().children('.shownhan').children('.red').remove();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.shownhan').append('<span class="red"></span>');
+				$this.parents('.modal').prev().prev().children('.shownhan').append('<span class="red"></span>');
+			}
+		})
+		$("body").on("click",".violet",function(){
+			var $this = $(this);
+			if($this.parents('.thanhvien').prev().children('.shownhan').has('span')){
+				$this.parents('.thanhvien').prev().children('.title_nhan').show();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.title_nhan').hide();
+			}
+			if($this.parents('.thanhvien').prev().children('.shownhan').children().hasClass('violet')){
+				$this.parents('.thanhvien').prev().children('.shownhan').children('.violet').remove();
+				$this.parents('.modal').prev().prev().children('.shownhan').children('.violet').remove();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.shownhan').append('<span class="violet"></span>');
+				$this.parents('.modal').prev().prev().children('.shownhan').append('<span class="violet"></span>');
+			}
+		})
+		$("body").on("click",".blue",function(){
+			var $this = $(this);
+			if($this.parents('.thanhvien').prev().children('.shownhan').has('span')){
+				$this.parents('.thanhvien').prev().children('.title_nhan').show();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.title_nhan').hide();
+			}
+			if($this.parents('.thanhvien').prev().children('.shownhan').children().hasClass('blue')){
+				$this.parents('.thanhvien').prev().children('.shownhan').children('.blue').remove();
+				$this.parents('.modal').prev().prev().children('.shownhan').children('.blue').remove();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.shownhan').append('<span class="blue"></span>');
+				$this.parents('.modal').prev().prev().children('.shownhan').append('<span class="blue"></span>');
+			}
+			
+		})
+		$("body").on("click",".pink",function(){
+			var $this = $(this);
+			if($this.parents('.thanhvien').prev().children('.shownhan').has('span')){
+				$this.parents('.thanhvien').prev().children('title_nhan').show();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.title_nhan').hide();
+			}
+			if($this.parents('.thanhvien').prev().children('.shownhan').children().hasClass('pink')){
+				$this.parents('.thanhvien').prev().children('.shownhan').children('.pink').remove();
+				$this.parents('.modal').prev().prev().children('.shownhan').children('.pink').remove();
+			}
+			else{
+				$this.parents('.thanhvien').prev().children('.shownhan').append('<span class="pink"></span>');
+				$this.parents('.thanhvien').prev().prev().children('.shownhan').append('<span class="pink"></span>');
+			}
+		})
+
+	})
+		
+	function allowDrop(ev) {
+    ev.preventDefault();
+	}
+
+	function drag(ev) {
+	    ev.dataTransfer.setData("text", ev.target.id);
+	}
+
+	function drop(ev) {
+	    ev.preventDefault();
+	    var data = ev.dataTransfer.getData("text");
+	    ev.target.appendChild(document.getElementById(data));
+	}
+	
+</script>
