@@ -494,7 +494,7 @@
 			$this.prev(".form-control").hide();
 			$this.prev().prev().prev(".edit").show();
 
-			localStorage.setItem("body",document.body.innerHTML); //////////
+			//localStorage.setItem("body",document.body.innerHTML); //////////
 		})
 		$("body").on("click", ".edit", function(){
 			var $this = $(this);
@@ -512,7 +512,7 @@
 			$this.parent().next().children(".hoatdong").append("<p>"+n+"</p>");
 			$this.prev(".form-control").val("");
 			
-			localStorage.setItem("body",document.body.innerHTML); //////////
+			//localStorage.setItem("body",document.body.innerHTML); //////////
 		})
 
 		$("body").on("click",".remove",function(){
