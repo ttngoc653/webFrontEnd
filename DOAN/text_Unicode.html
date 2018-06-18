@@ -464,7 +464,7 @@
 			$($this).hide();
 			$(".text").val("");
 			i++;
-			localStorage.setItem("body_unicode",document.body.innerHTML); //////////
+			//localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 		$("body").on("click", ".c-close", function(){
 			var $this = $(this);
@@ -480,7 +480,7 @@
 			$this.parent().hide();
 			$this.parent().next().show();
 			
-			localStorage.setItem("body_unicode",document.body.innerHTML); //////////
+			//localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 
 
@@ -522,7 +522,7 @@
 			$this.parent().next().remove();
 			$this.parent().remove();
 			
-			localStorage.setItem("body_unicode",document.body.innerHTML); //////////
+			//localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 		
 
@@ -532,7 +532,7 @@
 			$this.prev().show();
 			$this.hide();
 			
-			localStorage.setItem("body_unicode",document.body.innerHTML); //////////
+			//localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 		$(".addss").click(function(){
 			var $this = $(this);
@@ -542,14 +542,14 @@
 			$this.parent().next().show();
 			$this.prev(".texts").val("");	
 			
-			localStorage.setItem("body_unicode",document.body.innerHTML); //////////
+			//localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 
 		$("body").on("click", ".remove_table", function(){
 			var $this = $(this);
 			$this.parent().parent().remove();
 			
-			localStorage.setItem("body_unicode",document.body.innerHTML); //////////
+			//localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 
 
