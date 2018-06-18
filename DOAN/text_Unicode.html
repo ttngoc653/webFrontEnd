@@ -405,7 +405,7 @@
 
  if (typeof(Storage) !== "undefined") { //////////
 		if(localStorage.getItem("body_unicode")!=null){
-			alert(localStorage.getItem("body_unicode")); //////////
+			//alert(localStorage.getItem("body_unicode")); //////////
 			document.body.innerHTML=localStorage.getItem("body_unicode"); //////////
 		}
 	} //////////
@@ -462,7 +462,7 @@
 			$($this).hide();
 			$(".text").val("");
 			i++;
-			localStorage.setItem("body",document.body.innerHTML); //////////
+			localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 		$("body").on("click", ".c-close", function(){
 			var $this = $(this);
@@ -473,12 +473,12 @@
 			var $this = $(this);
 			var n = $this.prev().val();	
 
-			$this.parent().before("<div draggable='true' ondragstart='drag(event)' id='drag "+i+"' class='primary' data-toggle='modal' data-target='#exampleModalCenter"+i+"'>"+n+" <span class='remove'>xoa</span></div>	<div class='modal fade' id='exampleModalCenter"+i+"' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>	<div class='modal-dialog modal-dialog-centered' role='document'>	<div class='modal-content'>	<div class='modal-header'>	<h5 class='modal-title'></h5>  <button type='button' class='close' data-dismiss='modal' aria-label='Close'>	<span aria-hidden='true'>&times;</span>	</button> </div>	<div class='modal-body'><div class='title_nhan'>Nhan</div> <div class='shownhan'></div> <div class='title_name'>Thanh vien</div> <div class='showname'></div>	<div class='form-group'>	<label for='message-text' class='col-form-label'>Mo ta</label> 	<span class='edit'>chÃ¡Â»â€°nh sÃ¡Â»Â­a</span>	<p class='mota'></p>	<textarea class='form-control' placeholder='them mo ta chi tiet'></textarea>	<button class='luu'>lÃ†Â°u</button>	</div>			<div class='form-group'><label for='message-text' class='col-form-label'>them binh luan</label>	<textarea class='form-control' placeholder='viet binh luan'></textarea>	<button class='save'>lÃ†Â°u</button>	</div>	<div class='form-group'><label for='message-text' class='col-form-label'>HoÃ¡ÂºÂ¡t Ã„â€˜Ã¡Â»â„¢ng</label>	<p class='hoatdong'></p></div></div> <div class='thanhvien'> <h5>Them</h5> <button class='thanhvien1'>Thanh vien</button> <button class='nhan'>Nhan</button> <div class='color'> <h5>Nhan</h5><span class='remove_table1'>X</span><button class='green'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='yellow'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='orange'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='red'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='violet'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='blue'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='pink'><i class='fa fa-pencil' aria-hidden='true'></i></button></div> <div class='member'><h5>Thanh vien</h5><span class='remove_table2'>X</span><input type='text' class='search' placeholder='Type to search'><table class='table'><tr class='name1'><td>Adele</td></tr> <tr class='name2'> <td>Billy</td></tr><tr class='name3'><td>Candy</td></tr> <tr class='name4'><td>Agnes</td> </tr> <tr class='name5'><td>Bob</td></tr></table></div>	 	</div>	</div>	</div>	</div>");
+			$this.parent().before("<div draggable='true' ondragstart='drag(event)' id='drag "+i+"' class='primary' data-toggle='modal' data-target='#exampleModalCenter"+i+"'>"+n+" <span class='remove'>xoa</span></div>	<div class='modal fade' id='exampleModalCenter"+i+"' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>	<div class='modal-dialog modal-dialog-centered' role='document'>	<div class='modal-content'>	<div class='modal-header'>	<h5 class='modal-title'></h5>  <button type='button' class='close' data-dismiss='modal' aria-label='Close'>	<span aria-hidden='true'>&times;</span>	</button> </div>	<div class='modal-body'><div class='title_nhan'>Nhan</div> <div class='shownhan'></div> <div class='title_name'>Thanh vien</div> <div class='showname'></div>	<div class='form-group'>	<label for='message-text' class='col-form-label'>Mo ta</label> 	<span class='edit'>chỉnh sửa</span>	<p class='mota'></p>	<textarea class='form-control' placeholder='them mo ta chi tiet'></textarea>	<button class='luu'>lưu</button>	</div>			<div class='form-group'><label for='message-text' class='col-form-label'>them binh luan</label>	<textarea class='form-control' placeholder='viet binh luan'></textarea>	<button class='save'>lưu</button>	</div>	<div class='form-group'><label for='message-text' class='col-form-label'>Hoạt động</label>	<p class='hoatdong'></p></div></div> <div class='thanhvien'> <h5>Them</h5> <button class='thanhvien1'>Thanh vien</button> <button class='nhan'>Nhan</button> <div class='color'> <h5>Nhan</h5><span class='remove_table1'>X</span><button class='green'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='yellow'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='orange'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='red'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='violet'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='blue'><i class='fa fa-pencil' aria-hidden='true'></i></button><button class='pink'><i class='fa fa-pencil' aria-hidden='true'></i></button></div> <div class='member'><h5>Thanh vien</h5><span class='remove_table2'>X</span><input type='text' class='search' placeholder='Type to search'><table class='table'><tr class='name1'><td>Adele</td></tr> <tr class='name2'> <td>Billy</td></tr><tr class='name3'><td>Candy</td></tr> <tr class='name4'><td>Agnes</td> </tr> <tr class='name5'><td>Bob</td></tr></table></div>	 	</div>	</div>	</div>	</div>");
 			
 			$this.parent().hide();
 			$this.parent().next().show();
 			
-			localStorage.setItem("body",document.body.innerHTML); //////////
+			localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 
 
@@ -494,7 +494,7 @@
 			$this.prev(".form-control").hide();
 			$this.prev().prev().prev(".edit").show();
 
-			//localStorage.setItem("body",document.body.innerHTML); //////////
+			//localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 		$("body").on("click", ".edit", function(){
 			var $this = $(this);
@@ -512,7 +512,7 @@
 			$this.parent().next().children(".hoatdong").append("<p>"+n+"</p>");
 			$this.prev(".form-control").val("");
 			
-			//localStorage.setItem("body",document.body.innerHTML); //////////
+			//localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 
 		$("body").on("click",".remove",function(){
@@ -520,7 +520,7 @@
 			$this.parent().next().remove();
 			$this.parent().remove();
 			
-			localStorage.setItem("body",document.body.innerHTML); //////////
+			localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 		
 
@@ -530,24 +530,24 @@
 			$this.prev().show();
 			$this.hide();
 			
-			localStorage.setItem("body",document.body.innerHTML); //////////
+			localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 		$(".addss").click(function(){
 			var $this = $(this);
 			var n = $this.prev(".texts").val();	
-			$(".body").append("<div class='section' ondrop='drop(event)' ondragover='allowDrop(event)'><div class='form-group'><p class='suaten'>"+n+"</p><span class=\"remove_table\">X</span>	<i id=\"edit1\" class='fa fa-pencil' aria-hidden='true'></i> <div class='shownhan'></div> <textarea class='form-control' placeholder='chinh sua ten' style='display:none'></textarea> <button class='c-close1' style='display:none'>luu1</button></div> <div class='new'><textarea class='text'></textarea>	<button  class='add'>thÃƒÂªm</button>	<button class='c-close'>X</button></div><button class='add_modal'>ThÃƒÂªm thÃ¡ÂºÂ» ...</button></div>");
+			$(".body").append("<div class='section' ondrop='drop(event)' ondragover='allowDrop(event)'><div class='form-group'><p class='suaten'>"+n+"</p><span class=\"remove_table\">X</span>	<i id=\"edit1\" class='fa fa-pencil' aria-hidden='true'></i> <div class='shownhan'></div> <textarea class='form-control' placeholder='chinh sua ten' style='display:none'></textarea> <button class='c-close1' style='display:none'>luu1</button></div> <div class='new'><textarea class='text'></textarea>	<button  class='add'>thêm</button>	<button class='c-close'>X</button></div><button class='add_modal'>Thêm thẻ ...</button></div>");
 			$this.parent().hide();
 			$this.parent().next().show();
 			$this.prev(".texts").val("");	
 			
-			localStorage.setItem("body",document.body.innerHTML); //////////
+			localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 
 		$("body").on("click", ".remove_table", function(){
 			var $this = $(this);
 			$this.parent().parent().remove();
 			
-			localStorage.setItem("body",document.body.innerHTML); //////////
+			localStorage.setItem("body_unicode",document.body.innerHTML); //////////
 		})
 
 
@@ -586,7 +586,7 @@
 			$('.thanhvien').show();
 		})
 
-		// thÃƒÂªm tÃƒÂªn thÃƒÂ nh viÃƒÂªn
+		// thêm tên thành viên
 		$("body").on("click",".name1",function(){
 		var $this = $(this);
 		var n = $this.val();
@@ -667,7 +667,7 @@
 		// them mau
 		$("body").on("click",".green",function(){
 			var $this = $(this);
-			// nÃ¡ÂºÂ¿u tÃ¡Â»â€œn tÃ¡ÂºÂ¡i bÃ¡ÂºÂ¥t kÃ¡Â»Â³ 1 mÃƒÂ u nÃƒÂ o thÃƒÂ¬ <div class="title_nhan">Nhan</div> sÃ¡ÂºÂ½ Ã¡ÂºÂ©n vÃƒÂ  ngÃ†Â°Ã¡Â»Â£c lÃ¡ÂºÂ¡i
+			// nếu tồn tại bất kỳ 1 màu nào thì <div class="title_nhan">Nhan</div> sẽ ẩn và ngược lại
 			if($this.parents('.thanhvien').prev().children('.shownhan').has('span')){
 				$this.parents('.thanhvien').prev().children('.title_nhan').show();
 			}
@@ -676,7 +676,7 @@
 				$this.html("ngu");
 			}
 
-			// kiÃ¡Â»Æ’m tra nÃ¡ÂºÂ¿u tÃ¡Â»â€œn tÃ¡ÂºÂ¡i mÃƒÂ u green thÃƒÂ¬ xÃƒÂ³a. chÃ†Â°a thÃƒÂ¬ thÃƒÂªm vÃƒÂ o
+			// kiểm tra nếu tồn tại màu green thì xóa. chưa thì thêm vào
 			if($this.parents('.thanhvien').prev().children('.shownhan').children().hasClass('green')){
 				$this.parents('.thanhvien').prev().children('.shownhan').children('.green').remove();
 				$this.parents('.modal').prev().prev().children('.shownhan').children('.green').remove();
