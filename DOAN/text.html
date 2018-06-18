@@ -404,8 +404,10 @@
 	// });
 	
 	if (typeof(Storage) !== "undefined") { //////////
-		//alert(localStorage.getItem("body")); //////////
-		document.body.innerHTML=localStorage.getItem("body"); //////////
+		if(localStorage.getItem("body")!=null){
+			//alert(localStorage.getItem("body")); //////////
+			document.body.innerHTML=localStorage.getItem("body"); //////////
+		}
 	} //////////
 
  $(function() {
